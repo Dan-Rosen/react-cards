@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import Card from './Card'
 
+import styles from './Deck.module.css'
+
 const API_BASE_URL = 'https://deckofcardsapi.com/api/deck'
 
 class Deck extends Component {
@@ -57,7 +59,7 @@ class Deck extends Component {
                 <div>
                     <h1>Deck of Cards</h1>
                     <button onClick={this.getCard}>Deal a Card!</button>
-                    {cards}
+                    <div className={styles.CardArea}>{cards}</div>
                 </div>
             </div>
         )
